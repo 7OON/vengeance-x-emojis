@@ -6,15 +6,14 @@ USERS = {
     [1893359617] = true; -- alt5
     [109532438] = true; -- alt6
     [1632943347] = true; -- alt7
-    [443953] = true; -- alt8
-    [4078121] = true; -- alt9
-    [520381500] = true; -- alt10
+    [4078121] = true; -- alt8
+    [520381500] = true; -- alt9
 }
 
 FOUNDERS = {
     [2410334639] = true; -- crown emoji 1
     [3973212444] = true; -- crown emoji 2
-    [3973212444] = true; -- crown emoji 3
+    [443953] = true; -- crown emoji 3
 }
 
 --// Don't mess with anything below this
