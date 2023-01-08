@@ -1,0 +1,39 @@
+USERS = {
+    [3639817654] = true; -- alt1
+    [3639819404] = true; -- alt2
+    [3639815799] = true; -- alt3
+    [965530617] = true; -- alt4
+    [1893359617] = true; -- alt5
+    [109532438] = true; -- alt6
+    [1632943347] = true; -- alt7
+    [443953] = true; -- alt8
+    [4078121] = true; -- alt9
+    [520381500] = true; -- alt10
+}
+
+FOUNDERS = {
+    [2410334639] = true; -- crown emoji 1
+    [3973212444] = true; -- crown emoji 2
+    [3973212444] = true; -- crown emoji 3
+}
+
+--// Don't mess with anything below this
+function initiateNames()
+    game.Players.LocalPlayer.Character.UpperTorso:FindFirstChild('OriginalSize'):Destroy()
+    for _,v in pairs(game:GetService('Players'):GetPlayers()) do
+        if v.Character then
+            if not v.Character.UpperTorso:FindFirstChild('OriginalSize') then
+                v.Character:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[🤩] ' .. v.Character:FindFirstChildWhichIsA('Humanoid').DisplayName)
+            end
+            if USERS[v.UserId] then
+                v.Character:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[😎] ' .. v.Character:FindFirstChildWhichIsA('Humanoid').DisplayName)
+            end
+            if FOUNDERS[v.UserId] then
+                v.Character:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[👑] ' .. v.Character:FindFirstChildWhichIsA('Humanoid').DisplayName)
+            end
+        end
+    end
+end
+
+local successful, errored = pcall(initiateNames)
+return USERS
